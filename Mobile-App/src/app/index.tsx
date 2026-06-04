@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet,Button, Alert,ScrollView } from "react-native";
 
 
 export default function Index() {
@@ -8,27 +8,34 @@ export default function Index() {
 
     <View style={styles.container}>
     <View style={styles.header}>
-    <Text style={styles.title}>FireManga🔥🔥</Text>
+    <Text style={styles.title}>FireManga🔥</Text>
+        <text></text>
+
+    <text>🔍</text>
     
-    <View style={styles.fillerbar}>
-  <Text style={{marginRight:12,color:"#ffffff"}}>type</Text>
-  <Text style={{marginRight:12,color:"#ffffff"}}>Genre</Text>
-  <Text style={{marginRight:12,color:"#ffffff"}}>Newest</Text>
-  <Text style={{marginRight:12,color:"#ffffff"}}>Added</Text>
-  <Text style={{marginRight:12,color:"#ffffff"}}>Random</Text>
-  <Text style={{marginRight:12,color:"#ffffff"}}>search</Text>
-  <Text style={{marginRight:12,color:"#ffffff"}}>filter</Text>
-  <Text style={{marginRight:12,color:"#ffffff"}}>login</Text>
+   
   </View>
+<view>
+   <View style={styles.fillerbar}>
+  <Text style={{marginRight:12,color:"#5e449a"}}>Anime</Text>
+  <Text style={{marginRight:12,color:"#5e449a"}}>Manga</Text>
+
   </View>
+  </view>
+    <ScrollView horizontal showsHorizontalScrollIndicator={true}
+>
 
    <View style={styles.container}></View>
-   <View style={styles.card}><Text>manga page</Text></View>
-   <View style={styles.card}><Text>manga page</Text></View>
-   <View style={styles.card}><Text>manga page</Text></View>
+   <View style={styles.card}><Text style={{marginRight:12,}}>manga page</Text></View>
+   <View style={styles.card}><Text style={{marginRight:12,}}>manga page</Text></View>
+   <View style={styles.card}><Text style={{marginRight:12,}}>manga page</Text></View>
+  <View style={styles.card}><Text style={{marginRight:12,}}>manga page</Text></View>
+   <View style={styles.card}><Text style={{marginRight:12,}}>manga page</Text></View>
+
+      </ScrollView>
 
    <View style={styles.footer}> 
-
+      
    </View>
 
 
@@ -51,7 +58,8 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "flex-start",         
     backgroundColor: "#030449",
-     
+    flexDirection:"column" 
+    
 
   
   },
@@ -72,24 +80,29 @@ const styles = StyleSheet.create({
         paddingVertical:9,
         paddingHorizontal:23,
         borderBottomWidth:1,
-        borderColor: "rgba(255,255,255,0.3)"
+        borderColor: "rgba(255,255,255,0.3)",
+        marginBottom:4
 
         
       },
        fillerbar:{
-        
+        backgroundColor:"#051638d3",
         flexDirection:"row",
         alignItems:"flex-start",
         paddingHorizontal:16,
         paddingVertical:4,
+        marginBottom:12
+
 
      
       },
       
       card:{
-        borderRadius:40
-
-
+        borderWidth:1,
+        borderColor:"#ffffff",
+        height:150,
+        width:250,
+        borderRadius:10,
 
 
       },
