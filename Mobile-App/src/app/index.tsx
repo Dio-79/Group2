@@ -33,7 +33,6 @@ export default function Index() {
    <View style={styles.card}><Text style={{marginRight:12,}}>manga page</Text></View>
 
       </ScrollView>
-
    <View style={styles.footer}> 
       
    </View>
