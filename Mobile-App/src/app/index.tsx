@@ -1,39 +1,44 @@
-import { Text, View, StyleSheet,Button, Alert,ScrollView } from "react-native";
+import { Text, View, StyleSheet,Button, Alert,ScrollView,Image } from "react-native";
 
 
 export default function Index() {
   return (
+
   
   
 
     <View style={styles.container}>
     <View style={styles.header}>
     <Text style={styles.title}>FireManga🔥</Text>
-        <text></text>
-
-    <text>🔍</text>
+    <Text>🔍</Text>
     
    
   </View>
-<view>
+
    <View style={styles.fillerbar}>
-  <Text style={{marginRight:12,color:"#5e449a"}}>Anime</Text>
-  <Text style={{marginRight:12,color:"#5e449a"}}>Manga</Text>
+ 
+<Button title="Anime" color="#5e449a" onPress={() => {}} />
+<Button title="Manga" color="#5e449a" onPress={() => {}} />
 
   </View>
-  </view>
-    <ScrollView horizontal showsHorizontalScrollIndicator={true}
+  
+    <ScrollView showsVerticalScrollIndicator showsHorizontalScrollIndicator={true}
 >
 
-   <View style={styles.container}></View>
-   <View style={styles.card}><Text style={{marginRight:12,}}>manga page</Text></View>
-   <View style={styles.card}><Text style={{marginRight:12,}}>manga page</Text></View>
-   <View style={styles.card}><Text style={{marginRight:12,}}>manga page</Text></View>
-  <View style={styles.card}><Text style={{marginRight:12,}}>manga page</Text></View>
-   <View style={styles.card}><Text style={{marginRight:12,}}>manga page</Text></View>
+   <View style={styles.cardgrid}>
+<View style={styles.overlaytext}>
+  <View style={styles.card}><Text style={{marginRight:12,}}></Text><Image source={{uri:  "https://m.media-amazon.com/images/I/81L94vkJmXL._RI_.jpg"}} style={styles.cardImage}/></View>
+</View>
+<View style={styles.card}><Text style={{marginRight:12,color:"#ffffff",fontWeight:"bold"}}>Naruto</Text><Image source={{uri: "https://m.media-amazon.com/images/I/81L94vkJmXL._RI_.jpg"}} style={styles.cardImage}/><View style={styles.overlaytext}></View></View>
+<View style={styles.card}><Text style={{marginRight:12,color:"#ffffff",fontWeight:"bold"}}>manga page</Text><Image source={{uri:"https://i.pinimg.com/originals/62/b9/5d/62b95d328e63f50825ff5eba267cacda.jpg"}} style={styles.cardImage}/><View style={styles.overlaytext}></View></View>
+<View style={styles.card}><Text style={{marginRight:12,color:"#ffffff",fontWeight:"bold"}}>manga page</Text><Image source={{uri: "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/02/mha-class-1-a-costumes.png"}} style={styles.cardImage}/><View style={styles.overlaytext}></View></View>
+<View style={styles.card}><Text style={{marginRight:12,color:"#ffffff",fontWeight:"bold"}}>manga page</Text><Image source={{uri: "https://m.media-amazon.com/images/I/81L94vkJmXL._RI_.jpg"}} style={styles.cardImage}/><View style={styles.overlaytext}></View></View>
+<View style={styles.card}><Text style={{marginRight:12,color:"#ffffff",fontWeight:"bold"}}>manga page</Text><Image source={{uri: "https://m.media-amazon.com/images/I/81L94vkJmXL._RI_.jpg"}} style={styles.cardImage}/><View style={styles.overlaytext}></View></View></View>
+ </ScrollView>
 
-      </ScrollView>
+
    <View style={styles.footer}> 
+    
       
    </View>
 
@@ -85,7 +90,6 @@ const styles = StyleSheet.create({
         
       },
        fillerbar:{
-        backgroundColor:"#051638d3",
         flexDirection:"row",
         alignItems:"flex-start",
         paddingHorizontal:16,
@@ -95,14 +99,40 @@ const styles = StyleSheet.create({
 
      
       },
+      cardgrid:{
+        flexDirection:"row",
+        flexWrap:"wrap",
+        gap:10,
+        padding:10,
+        alignSelf:"stretch"
+
+      },
       
       card:{
         borderWidth:1,
         borderColor:"#ffffff",
-        height:150,
-        width:250,
+        height:220,
+        width:"47%",
         borderRadius:10,
 
+
+      },
+overlaytext:{
+position:"absolute",
+bottom:0,
+left:0,
+right:0,
+backgroundColor:"rgba(0,0,0,0.5)",
+padding:6
+},
+
+      cardImage:{
+  overflow:"hidden",
+  width: "100%",
+  height: 160,
+  borderRadius: 10,
+  resizeMode: "cover",
+  
 
       },
      
@@ -110,8 +140,11 @@ const styles = StyleSheet.create({
       footer:{
         alignItems:"baseline",
         borderBottomWidth:1,
-        borderColor: "rgba(255,255,255,0.3)"
-      },
+        borderColor: "rgba(255,255,255,0.3)",
+         alignSelf:"stretch",
+  padding:16,
+  borderTopWidth:1,
+o      },
 
   
 });
